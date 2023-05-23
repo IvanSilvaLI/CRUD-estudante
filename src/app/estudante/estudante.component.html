@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<div class="bg-light-purple p-3 d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+<body>
+  <div class="container max-w-500 bg-light rounded">
+  <div class="row">
+    <div class="col-8 m-auto">
+    <form [formGroup]="formGroupEstudante">
+      <div class="mb-3">
+        <div class="display-6 text-center">
+          Cadastro de estudantes
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" formControlName="nome" class="form-control" id="nome" placeholder="Nome">
+      </div>
+      <div class="mb-3">
+        <label for="idade" class="form-label">Idade:</label>
+        <input type="number" formControlName="idade" class="form-control" id="idade" placeholder="Idade">
+      </div>
+      <div class="mb-3">
+        <label for="data_nascimento" class="form-label">Data de Nascimento:</label>
+        <input type="text" formControlName="data_nascimento" class="form-control" id="idade" placeholder="Idade">
+      </div>
+      <div class="mb-3">
+        <label for="cpf" class="form-label">CPF:</label>
+        <input type="text" formControlName="cpf" class="form-control" id="idade" placeholder="Idade">
+      </div>
+      <div class="mb-3">
+      <div class="btn btn-primary me-1" (click)="save()">Salvar</div>
+      <div class="btn btn-warning" (click)="clean()">Limpar</div>
+    </div>
+    </form>
+    </div>
+  </div>
+
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Opções</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudante of estudante">
+        <th scope="row">{{estudante.id}}</th>
+        <td>{{estudante.nome}} </td>
+        <td>{{estudante.idade}}</td>
+        <td>{{estudante.data_nascimento}} </td>
+        <td>{{estudante.cpf}}</td>
+        <td class="d-flex">
+          <button class="btn btn-primary me-1" (click)="edit(estudante)">Editar</button>
+          <button class="btn btn-danger" (click)="delete(estudante)">Excluir</button>
+        </td>
+
+      </tr>
+      <tr>
+
+
+    </tbody>
+  </table>
+</div>
+</body>
+</div>
+</html>
+

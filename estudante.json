@@ -1,0 +1,32 @@
+{
+  "estudantes": [
+    {
+      "id": 1,
+      "nome": "João Silva",
+      "idade": 20,
+      "data_nascimento": "2003-02-15",
+      "cpf": "123.456.789-00"
+    },
+    {
+      "id": 2,
+      "nome": "Maria Souza",
+      "idade": 19,
+      "data_nascimento": "2004-07-10",
+      "cpf": "987.654.321-00"
+    },
+    {
+      "id": 3,
+      "nome": "Pedro Santos",
+      "idade": 21,
+      "data_nascimento": "2002-09-30",
+      "cpf": "456.789.123-00"
+    },
+    {
+      "id": 4,
+      "nome": "Ana Oliveira",
+      "idade": 18,
+      "data_nascimento": "2005-04-05",
+      "cpf": "789.123.456-00"
+    }
+  ]
+}
